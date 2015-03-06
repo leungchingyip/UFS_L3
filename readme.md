@@ -4,37 +4,37 @@ It is a web app for displaying items. It base on Flask and Bootstrap.
 
 **What's included?**
 .
-├── catalog.py
-├── model.py
-├── readme.md
-├── static
-│   └── dist
-│       ├── css
-│       │   ├── blog.css
-│       │   ├── bootstrap-theme.css
-│       │   ├── bootstrap-theme.css.map
-│       │   ├── bootstrap-theme.min.css
-│       │   ├── bootstrap.css
-│       │   ├── bootstrap.css.map
-│       │   └── bootstrap.min.css
-│       ├── fonts
-│       │   ├── glyphicons-halflings-regular.eot
-│       │   ├── glyphicons-halflings-regular.svg
-│       │   ├── glyphicons-halflings-regular.ttf
-│       │   └── glyphicons-halflings-regular.woff
-│       └── js
-│           ├── bootstrap.js
-│           ├── bootstrap.min.js
-│           └── npm.js
-└── templates
-    ├── add.html
-    ├── base.html
-    ├── csrf.html
-    ├── delete.html
-    ├── edit.html
-    ├── home.html
-    ├── item.html
-    └── newcategory.html
+├── catalog.py  
+├── model.py  
+├── readme.md  
+├── static  
+│   └── dist  
+│       ├── css  
+│       │   ├── blog.css  
+│       │   ├── bootstrap-theme.css  
+│       │   ├── bootstrap-theme.css.map  
+│       │   ├── bootstrap-theme.min.css  
+│       │   ├── bootstrap.css  
+│       │   ├── bootstrap.css.map  
+│       │   └── bootstrap.min.css  
+│       ├── fonts  
+│       │   ├── glyphicons-halflings-regular.eot  
+│       │   ├── glyphicons-halflings-regular.svg  
+│       │   ├── glyphicons-halflings-regular.ttf  
+│       │   └── glyphicons-halflings-regular.woff  
+│       └── js  
+│           ├── bootstrap.js  
+│           ├── bootstrap.min.js  
+│           └── npm.js  
+└── templates  
+├── add.html  
+├── base.html  
+├── csrf.html  
+├── delete.html  
+├── edit.html  
+├── home.html  
+├── item.html  
+└── newcategory.html  
 
 **How to use?**
 
