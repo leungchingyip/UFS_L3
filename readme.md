@@ -1,6 +1,7 @@
-This is Udacity Full Stack Nano Degree project 3. 
-It is a web app for displaying items. It base on Flask and Bootstrap.
+This is Udacity Full Stack Nano Degree project 3.   It is a web app for displaying items. It base on Flask and Bootstrap.
 ----------------
+
+
 
 **What's included?**  
 .  
