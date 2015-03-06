@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+  <h3>Add New Item</h3>
+  <hr>
+
+<form method="post" role="form" >
+ {% include "csrf.html" %}
+  <div class="form-group">
+  	<label for="name">Name:</label>
+    <input id="name" type="text" class="form-control" placeholder="Name" name="name">
+  </div>
+
+  <div class="form-group">
+    <label for="discription">Discription:</label>
+    <input id="discription" type="text" class="form-control" placeholder="Discription" name="discription">
+  </div>
+
+  <div class="form-group">
+    <label for="photo">Photo Link:</label>
+    <input id="photo" type="text" class="form-control" placeholder="Photo Link" name="photo">
+  </div>
+
+  <div class="form-group">
+    <label for="category">Category:</label>
+    <select id="category" class="form-control" name="category" >
+    	<option value="none" disabled selected>Category</option>
+    	{% for i in c %}
+    	<option value="{{ i.name }}">{{ i.name }}</option>
+    	{% endfor %}
+    </select>
+  </div>
+
+  <button type="submit" class="btn btn-xs btn-default">Add</button>
+
+</form>
+</div>
+
+
+{% endblock content %}
