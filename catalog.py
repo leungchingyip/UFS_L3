@@ -30,7 +30,7 @@ password = "a"
 app.secret_key= "uuuuuuuuuuuuuuu"
 
 # Initialize and connect database by SQLAlchemy
-engine = create_engine('postgresql://django:mimetext@localhost/catalog')
+engine = create_engine('postgresql://USERNAME:PASSWORD@localhost/catalog')
 Base.metadata.create_all(engine)
 Base.metadata.bind = engine
 
