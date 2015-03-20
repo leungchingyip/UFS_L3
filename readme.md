@@ -5,45 +5,45 @@
 **What's included?**  
 
 
-				.
-				|-- catalog.py
-				|-- FacebookSignUp.py
-				|-- file.db
-				|-- login.py
-				|-- model.py
-				|-- pip_setup.txt
-				|-- readme.md
-				|-- static
-				|   |-- dist
-				|   |   |-- css
-				|   |   |   |-- blog.css
-				|   |   |   |-- bootstrap.css
-				|   |   |   |-- bootstrap.css.map
-				|   |   |   |-- bootstrap.min.css
-				|   |   |   |-- bootstrap-theme.css
-				|   |   |   |-- bootstrap-theme.css.map
-				|   |   |   `-- bootstrap-theme.min.css
-				|   |   |-- fonts
-				|   |   |   |-- glyphicons-halflings-regular.eot
-				|   |   |   |-- glyphicons-halflings-regular.svg
-				|   |   |   |-- glyphicons-halflings-regular.ttf
-				|   |   |    -- glyphicons-halflings-regular.woff
-				|   |    -- js
-				|   |       |-- bootstrap.js
-				|   |       |-- bootstrap.min.js
-				|   |        -- npm.js
-				|    -- image
-				|-- templates
-				|   |-- add.html
-				|   |-- base.html
-				|   |-- csrf.html
-				|   |-- delete.html
-				|   |-- edit.html
-				|   |-- home.html
-				|   |-- item.html
-				|    -- newcategory.html
-				|-- upload_image.py
-				 -- Vagrantfile  
+			.
+			|-- catalog.py
+			|-- FacebookSignUp.py
+			|-- file.db
+			|-- login.py
+			|-- model.py
+			|-- pip_setup.txt
+			|-- readme.md
+			|-- static
+			|   |-- dist
+			|   |   |-- css
+			|   |   |   |-- blog.css
+			|   |   |   |-- bootstrap.css
+			|   |   |   |-- bootstrap.css.map
+			|   |   |   |-- bootstrap.min.css
+			|   |   |   |-- bootstrap-theme.css
+			|   |   |   |-- bootstrap-theme.css.map
+			|   |   |   `-- bootstrap-theme.min.css
+			|   |   |-- fonts
+			|   |   |   |-- glyphicons-halflings-regular.eot
+			|   |   |   |-- glyphicons-halflings-regular.svg
+			|   |   |   |-- glyphicons-halflings-regular.ttf
+			|   |   |    -- glyphicons-halflings-regular.woff
+			|   |    -- js
+			|   |       |-- bootstrap.js
+			|   |       |-- bootstrap.min.js
+			|   |        -- npm.js
+			|    -- image
+			|-- templates
+			|   |-- add.html
+			|   |-- base.html
+			|   |-- csrf.html
+			|   |-- delete.html
+			|   |-- edit.html
+			|   |-- home.html
+			|   |-- item.html
+			|    -- newcategory.html
+			|-- upload_image.py
+			 -- Vagrantfile  
 
 	
 
