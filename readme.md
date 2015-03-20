@@ -1,10 +1,6 @@
 ######This is Udacity Full Stack Nano Degree project 3.It is a web app for displaying items. It base on Flask and Bootstrap.
 
 ----------------
-
-
-
-**What's included?**  
 .  
 |-- catalog.py  
 |-- FacebookSignUp.py  
@@ -21,28 +17,32 @@
 |   |   |   |-- bootstrap.min.css  
 |   |   |   |-- bootstrap-theme.css  
 |   |   |   |-- bootstrap-theme.css.map  
-|   |   |   `-- bootstrap-theme.min.css   
+|   |   |   `-- bootstrap-theme.min.css  
 |   |   |-- fonts  
-|   |   |   |-- glyphicons-halflings-regular.eot   
-|   |   |   |-- glyphicons-halflings-regular.svg   
-|   |   |   |-- glyphicons-halflings-regular.ttf   
-|   |   |   `-- glyphicons-halflings-regular.woff   
-|   |   `-- js   
-|   |       |-- bootstrap.js    
-|   |       |-- bootstrap.min.js    
-|   |       `-- npm.js    
-|   `-- image    
-|-- templates    
+|   |   |   |-- glyphicons-halflings-regular.eot  
+|   |   |   |-- glyphicons-halflings-regular.svg  
+|   |   |   |-- glyphicons-halflings-regular.ttf  
+|   |   |   `-- glyphicons-halflings-regular.woff  
+|   |   `-- js  
+|   |       |-- bootstrap.js  
+|   |       |-- bootstrap.min.js  
+|   |       `-- npm.js  
+|   `-- image  
+|-- templates  
 |   |-- add.html  
-|   |-- base.html   
-|   |-- csrf.html   
+|   |-- base.html  
+|   |-- csrf.html  
 |   |-- delete.html  
-|   |-- edit.html   
-|   |-- home.html   
-|   |-- item.html   
-|   `-- newcategory.html   
-|-- upload_image.py   
-`-- Vagrantfile   
+|   |-- edit.html  
+|   |-- home.html  
+|   |-- item.html  
+|   `-- newcategory.html  
+|-- upload_image.py  
+`-- Vagrantfile  
+
+
+**What's included?**  
+ 
 
 **How to use?**
 
@@ -50,7 +50,10 @@ If don not use vagrant, please skip step 1 and 2.
 
 1. Install [VagrantBox](https://www.virtualbox.org/wiki/Downloads) and [Vagrant](https://www.vagrantup.com/downloads)
 
-2. At the catalog.py exists directory  <code>vagrant up”<code>   then   <code>vagrant ssh<code>  
+2. At the catalog.py exists directory  
+	vagrant up   
+then   
+	vagrant ssh 
 
 3. Install the necessary module.  <code>pip install -r pip_setup.py<code>
 
@@ -58,6 +61,7 @@ If don not use vagrant, please skip step 1 and 2.
 
 4. Set your configuration of your database in create_engine line. Include which kind of database, database's user name, and adress.
 
-5. <code>python catalog.py<code>   Run the app on localhost.
+5.		python catalog.py 
+Run the app on localhost.
 
 
