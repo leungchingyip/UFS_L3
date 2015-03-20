@@ -6,52 +6,58 @@
 
 **What's included?**  
 .  
-├── catalog.py  
-├── model.py  
-├── readme.md  
-├── static  
-│   └── dist  
-│       ├── css  
-│       │   ├── blog.css  
-│       │   ├── bootstrap-theme.css  
-│       │   ├── bootstrap-theme.css.map  
-│       │   ├── bootstrap-theme.min.css  
-│       │   ├── bootstrap.css  
-│       │   ├── bootstrap.css.map  
-│       │   └── bootstrap.min.css  
-│       ├── fonts  
-│       │   ├── glyphicons-halflings-regular.eot  
-│       │   ├── glyphicons-halflings-regular.svg  
-│       │   ├── glyphicons-halflings-regular.ttf  
-│       │   └── glyphicons-halflings-regular.woff  
-│       └── js  
-│           ├── bootstrap.js  
-│           ├── bootstrap.min.js  
-│           └── npm.js  
-└── templates  
-├── add.html  
-├── base.html  
-├── csrf.html  
-├── delete.html  
-├── edit.html  
-├── home.html  
-├── item.html  
-└── newcategory.html  
+|-- catalog.py  
+|-- FacebookSignUp.py  
+|-- login.py  
+|-- model.py  
+|-- pip_setup.txt  
+|-- readme.md  
+|-- static  
+|   |-- dist  
+|   |   |-- css  
+|   |   |   |-- blog.css  
+|   |   |   |-- bootstrap.css  
+|   |   |   |-- bootstrap.css.map  
+|   |   |   |-- bootstrap.min.css  
+|   |   |   |-- bootstrap-theme.css  
+|   |   |   |-- bootstrap-theme.css.map  
+|   |   |   `-- bootstrap-theme.min.css  
+|   |   |-- fonts  
+|   |   |   |-- glyphicons-halflings-regular.eot  
+|   |   |   |-- glyphicons-halflings-regular.svg  
+|   |   |   |-- glyphicons-halflings-regular.ttf  
+|   |   |   `-- glyphicons-halflings-regular.woff  
+|   |   `-- js  
+|   |       |-- bootstrap.js  
+|   |       |-- bootstrap.min.js  
+|   |       `-- npm.js  
+|   `-- image  
+|-- templates  
+|   |-- add.html  
+|   |-- base.html  
+|   |-- csrf.html  
+|   |-- delete.html  
+|   |-- edit.html  
+|   |-- home.html  
+|   |-- item.html  
+|   `-- newcategory.html  
+|-- upload_image.py  
+`-- Vagrantfile  
 
 **How to use?**
 
-1. Install [Flask](http://flask.pocoo.org/docs/0.10/installation/):
+If don not use vagrant, please skip step 1 and 2.
 
-2. Install [Flask-WTF](https://flask-wtf.readthedocs.org/en/latest/install.html). It provides the csrf protection function in this app.
+1. Install [VagrantBox](https://www.virtualbox.org/wiki/Downloads) and Vagrant(https://www.vagrantup.com/downloads)
 
-3. Set your 'username', 'password' and 'secret_key' in Catalog.py.
+2. At the catalog.py exists directory, type “vagrant up”, then “vagrant ssh”.
+
+3. Type “pip install -r pip_setup.py” to install the necessary module.
+
+3. Set your ‘client_id’ and ‘client_secret' in FacebookSignUp.py.
 
 4. Set your configuration of your database in create_engine line. Include which kind of database, database's user name, and adress.
 
-5. Database structure is changable by modify model.py before the first time running of the APP. Schemas modify after running, please refer to [Altering Schemas through Migrations](http://docs.sqlalchemy.org/en/latest/core/metadata.html#altering-schemas-through-migrations)
-
-6. Add {% include "csrf.html" %} for csrf protection in form tag in html template if add any new.
-
-7. Deploy it on your server. More infomation:[Deployment Options](http://flask.pocoo.org/docs/0.10/deploying/)
+5. Type “python catalog.py” to run the app on localhost.
 
 

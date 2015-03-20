@@ -56,9 +56,6 @@
     </div>
 
 
-
-
-
     <div id="navbar" class="navbar-collapse collapse">
 
 
@@ -79,7 +76,8 @@
                 <li class="active"><a href="/add">Add</a></li>  
                 <li class="active"><a href="/logout">Log out</a></li> 
               {% else %}
-                <li class="active"><a href="#" data-toggle="modal" data-target=".login_modal">Login</a></li> 
+<!--                 <li class="active"><a href="/" data-toggle="modal" data-target=".login_modal">Login</a></li>  -->
+                <li class="active"><a href="/login">Login</a></li>
               {% endif %}
           </ul>
 
@@ -90,7 +88,7 @@
 </nav>
 
 <!-- login modal -->
-<div class="modal fade login_modal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+<!-- <div class="modal fade login_modal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-sm">
    <div class="modal-content">
           <div class="modal-header">
@@ -118,7 +116,7 @@
 
     </div>
   </div>
-</div>
+</div> -->
 <!-- login modal end -->
 
 {% block content %}

@@ -1,6 +1,8 @@
 from sqlalchemy import Column, String, Integer, ForeignKey, DateTime
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import relationship, backref
+from flask.ext.login import UserMixin
+
 
 
 Base = declarative_base()
@@ -27,13 +29,12 @@ class Category(Base):
 class Item(Base):
 	__tablename__ = 'Item'
 
-	id = Column(String, primary_key=True)
+	id = Column(Integer, primary_key=True)
 	name = Column(String)
 	discription = Column(String)
 	photo = Column(String)
 	category = Column(String, ForeignKey('Category.name'))
-	create_time = Column(DateTime)
-
+	create_time = Column(String)
 	def __repr__(self):
 		return "<Item(name='%s', discription='%s', category='%s')>" % (
 			self.name, self.discription, self.category)
@@ -49,3 +50,10 @@ class Item(Base):
            'Create_time'  : self.create_time,
            
        }
+
+class User(Base, UserMixin):
+	__tablename__ = "user"
+	id = Column(Integer, primary_key=True)
+	social_id = Column(String, nullable=False, unique=True)
+	email = Column(String)
+
