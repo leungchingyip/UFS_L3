@@ -45,11 +45,11 @@
 	|-- upload_image.py
 	 -- Vagrantfile  
 
-	
+
 
 **How to use?**
 
-If don not use vagrant, please skip step 1 and 2.
+If do not use vagrant, please skip steps 1 and 2.
 
 1. Install [VagrantBox](https://www.virtualbox.org/wiki/Downloads) and [Vagrant](https://www.vagrantup.com/downloads)
 
