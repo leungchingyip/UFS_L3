@@ -12,8 +12,6 @@ from flask_wtf.csrf import CsrfProtect
 
 from datetime import datetime
 
-from werkzeug import secure_filename
-
 from flask.ext.login import LoginManager, UserMixin,\
  login_user, logout_user, current_user
 
@@ -127,8 +125,7 @@ def vacant_input(*disable_variable):
 			else:
 				if not request.files[i]:
 					error[i] = True
-	add_error(var)
-	return error
+		return error
 
 
 @app.route('/add', methods=['GET', 'POST'])
@@ -136,9 +133,8 @@ def newItem():
 	"""This page will be for adding a new item."""
 	error=None
 	login_already=current_user.is_authenticated()
-	""" This function will return to homepage if it found user is not login. 
-	 	There are same setting in pages below which are
-	 	able to edit the database. """
+	#   This function will return to homepage if it found user is not login. 
+	#  	There are same setting in pages below which are able to edit the database. 
 	if login_already:
 		if request.method == "POST":
 			error = vacant_input()
@@ -194,8 +190,8 @@ def editItem(item):
 			error=vacant_input("photo")
 			# Check if there is any empty input except photo.
 			if not error:
-				"""go on input database if no empty imput. If there any, 
-				   reload and labels of the empty form will turn red."""
+				# go on input database if no empty imput. If there any, 
+				# reload and labels of the empty form will turn red.
 				i.name= request.form['name']
 				i.discription= request.form['discription']
 				i.category= request.form['category']
@@ -213,7 +209,7 @@ def editItem(item):
 	else:
 		return redirect("/")
 
-@app.route('/<item>/delete', methods=['GET', 'POST'])
+@app.route('/<item>/delete', methods=['POST'])
 def deleteItem(item):
 	"""This page will be for deleting the selected item"""
 	login_already=current_user.is_authenticated()

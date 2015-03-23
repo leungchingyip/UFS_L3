@@ -55,7 +55,7 @@ If do not use vagrant, please skip steps 1 and 2.
 
 2. At the catalog.py exists directory: `vagrant up`, then: `vagrant ssh`
 
-3. Install the necessary module:  <code>pip install -r pip_setup.py<code>
+3. Install the necessary module:  <code>pip install -r pip_setup.txt<code>
 
 3. Set your ‘client_id’ and ‘client_secret' in FacebookSignUp.py.
 
