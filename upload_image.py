@@ -3,7 +3,7 @@ from flask import request
 
 # set the upload directory and allowed file types of photo  
 ALLOWED_EXTENSIONS = set(['png', 'jpg', 'jpeg', 'gif'])
-IMAGE_PATH = os.getcwd() + "/static/image"
+IMAGE_PATH = os.path.dirname(os.path.abspath(__file__)) + "/static/image"
 
 
 def allowed_file(filename):
@@ -11,7 +11,7 @@ def allowed_file(filename):
 	Args:
 		filename(str): get the name from the upload file"""
 	if '.' in filename and \
-		filename.rsplit('.', 1)[1] in ALLOWED_EXTENSIONS:
+		filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS:
 		return "."+filename.rsplit('.', 1)[1]
 
 def upload_image(set_name):
@@ -26,3 +26,7 @@ def upload_image(set_name):
 			filename=str(set_name)+file_type 
 			file.save(os.path.join(IMAGE_PATH, filename))
 			return "/static/image/"+filename
+		else:
+			return "http://upload.wikimedia.org/wikipedia/commons/a/ac/No_image_available.svg"
+	else:
+                return "http://upload.wikimedia.org/wikipedia/commons/a/ac/No_image_available.svg"

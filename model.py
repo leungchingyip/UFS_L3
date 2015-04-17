@@ -51,8 +51,8 @@ class Item(Base):
            
        }
 
-class User(Base, UserMixin):
-	__tablename__ = "user"
+class FUser(Base, UserMixin):
+	__tablename__ = "FUser"
 	id = Column(Integer, primary_key=True)
 	social_id = Column(String, nullable=False, unique=True)
 	email = Column(String)

@@ -4,7 +4,7 @@ Response, url_for, request, jsonify
 
 from sqlalchemy import create_engine, desc
 from sqlalchemy.orm import sessionmaker
-from model import Base, Category, Item, FUser
+from model import Base, Category, Item, User
 
 import jinja2 
 
@@ -24,7 +24,6 @@ from FacebookSignUp import FacebookSignUp
 from upload_image import upload_image
 
 app = Flask(__name__)
-app.debug = True
 
 # Run Flask_WTF's CRSFProtect
 CsrfProtect(app)
@@ -35,7 +34,7 @@ app.secret_key= "uuuuuuuuuuuuuuu"
 
 # Initialize and connect database by SQLAlchemy
 CURRENT_PATH = os.getcwd()
-engine = create_engine('postgres://catalog:cataword@localhost/catalog')
+engine = create_engine('postgres://catalog:catawordlocalhost/catalog')
 Base.metadata.create_all(engine)
 Base.metadata.bind = engine
 DBSession = sessionmaker(bind=engine)
@@ -49,7 +48,7 @@ LoginManager = LoginManager(app)
 @LoginManager.user_loader
 def load_user(id):
 	"""Load user in User by id"""
-	return session.query(FUser).get(int(id))
+	return session.query(User).get(int(id))
 
 @app.route('/logout')
 def logout():
@@ -80,14 +79,14 @@ def oauthCallback():
 		flash("Authentication failed.")
 		return redirect("/")
 
-	# Check if the user already signup in our database
+	# Check if the user alwaydy signup in our database
 	try:
-		user = session.query(FUser).filter_by(social_id=str(social_id)).one()
-	except:
+		user = session.query(User).filter_by(social_id=str(social_id)).one()
+	except AttributeError:
 		user = None
 	# If user is not in database, put it in
 	if not user:
-		user = FUser(social_id=str(social_id), email=email)
+		user = User(social_id=str(social_id), email=email)
 		session.add(user)
 		session.commit()
 	# Get the user login
@@ -210,7 +209,7 @@ def editItem(item):
 	else:
 		return redirect("/")
 
-@app.route('/<item>/delete', methods=['GET','POST'])
+@app.route('/<item>/delete', methods=['POST'])
 def deleteItem(item):
 	"""This page will be for deleting the selected item"""
 	login_already=current_user.is_authenticated()
