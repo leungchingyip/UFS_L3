@@ -79,10 +79,10 @@ def oauthCallback():
 		flash("Authentication failed.")
 		return redirect("/")
 
-	# Check if the user alwaydy signup in our database
+	# Check if the user already signup in our database
 	try:
 		user = session.query(User).filter_by(social_id=str(social_id)).one()
-	except AttributeError:
+	except:
 		user = None
 	# If user is not in database, put it in
 	if not user:
